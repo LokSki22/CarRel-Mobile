@@ -31,10 +31,10 @@
 
 ## **No 3**
 3. Sebutkan apa saja elemen input pada form yang kamu pakai pada tugas kali ini dan jelaskan mengapa kamu menggunakan elemen input tersebut!
-    * `name` buku untuk menyimpan nama mobil 
+    * `name` untuk menyimpan nama mobil 
     * `amount` untuk menyimpan jumlah mobil
     * `description` untuk menyimpan deskripsi mobil. 
-    * Ketiga elemen input ini digunakan untuk mengisi data buku yang akan ditambahkan ke dalam database.
+    * Ketiga elemen input ini digunakan untuk mengisi data mobil yang akan ditambahkan ke dalam database.
 
 ## **No 4**
 4. Bagaimana penerapan clean architecture pada aplikasi Flutter?
@@ -315,7 +315,7 @@
 
     * Mengarahkan pengguna ke halaman tersebut jika menekan tombol Lihat Produk pada halaman utama atau drawer.
 
-    * Caranya: buatlah class Buku pada  `carrel_form.dart` untuk menginisiasi objek buku saat menekan tombol save (apabila valid). lalu buat `globals.dart` untuk menyimpan semua variabel global, dalam konteks ini untuk menyimpan list mobil yang telah dibuat. Kemudian buat tampilan baru yaitu data_buku.dart untuk menampilkan list buku yang telah dibuat. jangan lupa buat ListTile baru di dalam drawer dan lakukan routing untuk menuju page `data_carrel.dart`
+    * Caranya: buatlah class Car pada  `carrel_form.dart` untuk menginisiasi objek car saat menekan tombol save (apabila valid). lalu buat `globals.dart` untuk menyimpan semua variabel global, dalam konteks ini untuk menyimpan list mobil yang telah dibuat. Kemudian buat tampilan baru yaitu `data_carrel`.dart untuk menampilkan list car yang telah dibuat. jangan lupa buat ListTile baru di dalam drawer dan lakukan routing untuk menuju page `data_carrel.dart`
 
 
 
