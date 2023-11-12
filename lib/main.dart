@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:carrel/menu.dart';
+import 'package:carrel/screens/menu.dart';
+
 void main() {
   runApp(const MyApp());
 }
