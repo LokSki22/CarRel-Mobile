@@ -1,6 +1,49 @@
 # CarRel Mobile App
 # **Muhammad Farrel Altaf (2206829332) - PBP B**
 
+# Tugas 9
+## **No 1**
+1. Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+    * Mengambil data JSON langsung tanpa model bisa lebih cepat dan fleksibel untuk tugas-tugas kecil atau saat kita berurusan dengan struktur data yang sering berubah. 
+    * Namun, untuk aplikasi yang lebih besar atau saat struktur data kita sudah stabil, menggunakan model membantu menjaga kode Anda terorganisir dan memudahkan pemeliharaan jangka panjang. Pada akhirnya, memilih untuk menggunakan model atau tidak tergantung pada kebutuhan spesifik proyek kita dan bagaimana Anda ingin mengelola data Anda.
+
+## **No 2**
+2. Jelaskan fungsi dari CookieRequest dan jelaskan mengapa instance CookieRequest perlu untuk dibagikan ke semua komponen di aplikasi Flutter.
+    * Fungsi CookieRequest
+      - Pengelolaan Sesi: Cookie sering digunakan untuk mengelola sesi pengguna. CookieRequest memungkinkan aplikasi untuk mengirim dan menerima cookie dari server, yang membantu dalam mengidentifikasi dan mengelola sesi pengguna.
+
+      - Otentikasi: Dalam banyak kasus, cookie digunakan untuk proses otentikasi. CookieRequest membantu dalam mengirimkan informasi otentikasi yang diperlukan dalam cookie kepada server.
+
+      - Keamanan: Cookie dapat menyimpan token atau informasi keamanan lainnya. CookieRequest memastikan bahwa data sensitif ini ditangani dengan aman selama komunikasi antara klien dan server.
+
+      - Preferensi Pengguna: Cookie sering digunakan untuk menyimpan preferensi pengguna. CookieRequest memungkinkan aplikasi untuk mengakses dan memperbarui preferensi ini.
+
+    * Pentingnya Berbagi CookieRequest di Semua Komponen Aplikasi Flutter
+      - Konsistensi: Berbagi instance CookieRequest di seluruh aplikasi memastikan bahwa semua komponen aplikasi memiliki akses ke informasi cookie yang sama, yang penting untuk konsistensi sesi dan pengelolaan data pengguna.
+
+      - Efisiensi: Menggunakan instance CookieRequest yang sama di seluruh aplikasi lebih efisien daripada membuat instance baru setiap kali perlu mengakses cookie. Ini menghemat sumber daya dan memastikan respons yang lebih cepat.
+
+      - Pemeliharaan: Memiliki titik pusat untuk pengelolaan cookie membuat pemeliharaan lebih mudah. Perubahan pada cara cookie ditangani hanya perlu dilakukan di satu tempat.
+
+      - Keamanan: Mengelola cookie secara konsisten dan terpusat membantu dalam menjaga keamanan, karena memastikan bahwa semua komponen aplikasi mengikuti praktek terbaik yang sama untuk menangani data sensitif.
+
+## **No 3**
+3. Jelaskan mekanisme pengambilan data dari JSON hingga dapat ditampilkan pada Flutter.
+
+      * Mengambil Data JSON:
+        Dapatkan data JSON dari sumbernya, seperti API endpoint atau file JSON lokal. Gunakan package http untuk permintaan HTTP ke API dan mendapatkan respons JSON. Untuk file JSON lokal, gunakan package dart:convert untuk membaca file.
+
+      * Parsing Data JSON:
+        Gunakan package dart:convert untuk mengubah respons JSON menjadi objek Dart yang dapat digunakan dalam aplikasi Flutter. Metode jsonDecode() sering digunakan untuk konversi ini.
+
+      * Membuat Model Data:
+        Buat model data Dart yang sesuai dengan struktur JSON. Model ini berisi properti yang mencerminkan data JSON dan metode untuk mengonversi antara objek Dart dan JSON. Ini memudahkan akses dan manipulasi data.
+
+      * Menampilkan Data di Flutter:
+        Tampilkan data yang sudah diparsing dan di-modelkan di aplikasi Flutter menggunakan widget seperti ListView, GridView, atau DataTable. Akses properti dari model data untuk menampilkan informasi yang relevan.
+
+
+
 
 # Tugas 8
 ## **No 1**

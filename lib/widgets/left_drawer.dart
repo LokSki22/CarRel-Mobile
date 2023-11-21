@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:carrel/screens/menu.dart';
 import 'package:carrel/screens/carrel_form.dart';
-import 'package:carrel/screens/data_carrel.dart';
+//import 'package:carrel/screens/data_carrel.dart';
+import 'package:carrel/screens/list_item.dart';
 
 
 
@@ -65,14 +66,14 @@ class LeftDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: const Icon(Icons.library_books),
-            title: const Text('Lihat Mobil'),
+            leading: const Icon(Icons.shopping_basket),
+            title: const Text('Daftar Produk'),
             onTap: () {
-              Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const DataCarPage(),
-                  ));
+              // Route menu ke halaman produk
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const ProductPage()),
+              );
             },
           ),
         ],
