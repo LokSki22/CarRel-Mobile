@@ -40,9 +40,43 @@
         Buat model data Dart yang sesuai dengan struktur JSON. Model ini berisi properti yang mencerminkan data JSON dan metode untuk mengonversi antara objek Dart dan JSON. Ini memudahkan akses dan manipulasi data.
 
       * Menampilkan Data di Flutter:
-        Tampilkan data yang sudah diparsing dan di-modelkan di aplikasi Flutter menggunakan widget seperti ListView, GridView, atau DataTable. Akses properti dari model data untuk menampilkan informasi yang relevan.
+        Tampilkan data yang sudah diparsing dan di-modelkan di aplikasi Flutter menggunakan widget seperti ListView, GridView, atau DataTable. Akses properti dari model data untuk  menampilkan informasi yang relevan.
 
+## **No 4**
+4. Jelaskan mekanisme autentikasi dari input data akun pada Flutter ke Django hingga selesainya proses autentikasi oleh Django dan tampilnya menu pada Flutter.
+    * Input Data Akun di Flutter:
+      Pengguna memasukkan nama pengguna dan kata sandi di aplikasi Flutter.
 
+    * Pengiriman HTTP Request:
+      Aplikasi Flutter mengirim permintaan HTTP ke server Django dengan data akun.
+
+    * Penerimaan dan Pemeriksaan Data di Django:
+      Server Django menerima permintaan dan memeriksa data akun.
+      Django menggunakan autentikasi bawaan atau pustaka seperti Django REST Framework untuk memverifikasi akun.
+
+    * Generasi Token Akses/Sesi:
+      Jika akun valid, Django menghasilkan token akses atau sesi unik.
+
+    * Pengiriman Token ke Flutter:
+      Token dikirim kembali ke aplikasi Flutter sebagai respons.
+
+    * Penyimpanan Token di Flutter:
+      Aplikasi Flutter menyimpan token untuk digunakan dalam permintaan selanjutnya.
+
+    * Permintaan Berikutnya dengan Token:
+      Saat mengakses menu atau fitur yang memerlukan autentikasi, Flutter menyertakan token dalam permintaan HTTP ke Django.
+
+    * Verifikasi Token oleh Django:
+      Server Django memeriksa keabsahan token yang diterima dari Flutter.
+
+    * Pengizinan Akses oleh Django:
+      Jika token valid, Django mengizinkan akses ke menu atau fitur yang diminta.
+
+    * Pengiriman Data ke Flutter:
+      Data menu atau fitur yang diminta dikirimkan kembali ke aplikasi Flutter.
+
+    * Tampilan Menu/Fitur di Flutter:
+      Aplikasi Flutter menampilkan menu atau fitur yang diterima dari Django kepada pengguna.
 
 
 # Tugas 8
