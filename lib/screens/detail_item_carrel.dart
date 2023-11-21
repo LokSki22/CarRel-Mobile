@@ -23,7 +23,6 @@ class ProductDetailPage extends StatelessWidget {
             Text("Description: ${item.fields.description}"),
             Text("Categories: ${item.fields.categories}"),
             Text("Date Added: ${item.fields.dateAdded}"),
-            // Tambahkan lebih banyak detail sesuai kebutuhan
           ],
         ),
       ),
