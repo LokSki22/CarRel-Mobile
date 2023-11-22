@@ -2,6 +2,7 @@ import 'package:carrel/screens/menu.dart';
 import 'package:flutter/material.dart';
 import 'package:pbp_django_auth/pbp_django_auth.dart';
 import 'package:provider/provider.dart';
+import 'package:carrel/screens/register.dart';
 
 void main() {
   runApp(const LoginApp());
@@ -23,7 +24,7 @@ class LoginApp extends StatelessWidget {
 }
 
 class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+  const LoginPage({Key? key}) : super(key: key);
 
   @override
   _LoginPageState createState() => _LoginPageState();
@@ -74,6 +75,11 @@ class _LoginPageState extends State<LoginPage> {
                   'password': password,
                 });
 
+                // final response = await request.login("http://muhammad-farrel21-tugas.pbp.cs.ui.ac.id/auth/login/", {
+                //   'username': username,
+                //   'password': password,
+                // });
+
                 if (request.loggedIn) {
                   String message = response['message'];
                   String uname = response['username'];
@@ -91,7 +97,7 @@ class _LoginPageState extends State<LoginPage> {
                     builder: (context) => AlertDialog(
                       title: const Text('Login Gagal'),
                       content:
-                      Text(response['message']),
+                          Text(response['message']),
                       actions: [
                         TextButton(
                           child: const Text('OK'),
@@ -106,9 +112,20 @@ class _LoginPageState extends State<LoginPage> {
               },
               child: const Text('Login'),
             ),
+            const SizedBox(height: 12.0),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => RegistrationPage()),
+                );
+              },
+              child: const Text('Register'),
+            ),
           ],
         ),
       ),
     );
   }
 }
+
