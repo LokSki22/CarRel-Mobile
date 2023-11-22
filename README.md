@@ -368,7 +368,8 @@
           ```
 
 ## **Bonus**
-    * Menambahkan fitur register, dengan menambah fungsi register di views.py authentication django dan routing, lalu menambahkan page register.dart. Page tersebut dapat diakses dari halaman login.
+Menambahkan fitur register, dengan menambah fungsi `register` di views.py   authentication django dan routing, lalu menambahkan page `register.dart`. Page register tersebut dapat diakses dari halaman login.
+
        ```dart
         import 'dart:convert';
 
